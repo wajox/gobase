@@ -2,5 +2,5 @@
 .vscode
 docs/**
 .idea
-build/
+./build/
 .env
