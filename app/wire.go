@@ -10,7 +10,7 @@ import (
 
 func BuildApplication() (*Application, error) {
 	wire.Build(
-		initializers.InitializeBuildInfo()
+		initializers.InitializeBuildInfo,
 		wire.Struct(new(dependencies.Container), "BuildInfo"),
 		initializers.InitializeRouter,
 		initializers.InitializeHTTPServerConfig,
