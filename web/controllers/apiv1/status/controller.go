@@ -2,7 +2,7 @@ package status
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/ildarusmanov/gobase/app/config"
+	"github.com/ildarusmanov/gobase/app/build"
 	"github.com/ildarusmanov/gobase/web/controllers/apiv1"
 	"github.com/ildarusmanov/gobase/web/render"
 
@@ -19,12 +19,12 @@ var (
 
 type Controller struct {
 	apiv1.BaseController
-	AppConfig *config.Config
+	buildInfo *build.Info
 }
 
-func NewController(appConfig *config.Config) *Controller {
+func NewController(bi *build.Info) *Controller {
 	return &Controller{
-		AppConfig: appConfig,
+		buildInfo: bi,
 	}
 }
 
@@ -39,8 +39,7 @@ func NewController(appConfig *config.Config) *Controller {
 func (ctrl *Controller) GetStatus(ctx *gin.Context) {
 	render.JSONAPIPayload(ctx, http.StatusOK, &Response{
 		Status: StatusOK,
-		App:    ctrl.AppConfig.AppInfo,
-		Build:  ctrl.AppConfig.BuildInfo,
+		Build:  ctrl.buildInfo,
 	})
 }
 
