@@ -3,7 +3,6 @@ package app
 import (
 	"context"
 	"net/http"
-	"time"
 
 	"github.com/ildarusmanov/gobase/app/dependencies"
 	"github.com/ildarusmanov/gobase/app/initializers"
@@ -45,7 +44,6 @@ func (a *Application) StartHTTPServer() {
 		}
 	}()
 }
-
 
 func (a *Application) Stop() (err error) {
 	return a.httpServer.Shutdown(context.TODO())

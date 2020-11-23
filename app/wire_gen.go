@@ -13,12 +13,9 @@ import (
 // Injectors from wire.go:
 
 func BuildApplication() (*Application, error) {
-	config, err := ()
-	if err != nil {
-		return nil, err
-	}
+	info := initializers.InitializeBuildInfo()
 	container := &dependencies.Container{
-		ApplicationConfig: config,
+		BuildInfo: info,
 	}
 	engine := initializers.InitializeRouter(container)
 	httpServerConfig := initializers.InitializeHTTPServerConfig(engine)

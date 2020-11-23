@@ -18,7 +18,7 @@ test-all:
 
 .PHONY: build
 build:
-  go get -u github.com/swaggo/swag/cmd/swag
+	go get -u github.com/swaggo/swag/cmd/swag
 	${MAKE} docs
 	go mod verify
 	go mod tidy
