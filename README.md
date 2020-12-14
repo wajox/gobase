@@ -51,6 +51,8 @@ make deps
 * gin-gonic
 * ginkgo with gomega
 * viper
+* envy
+* zerolog
 * golangci-lint
 * wire
 * swag
