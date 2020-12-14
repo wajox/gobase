@@ -5,7 +5,7 @@ This is a simple skeleton for golang application. Inspired by development experi
 ## How to use?
 
 1. `git clone github.com/ildarusmanov/gobase [project_name]`
-2. replace `github.com/ildarusmanov/gobase` with `[your_pkg_name]` in all files
+2. replace `github.com/ildarusmanov/gobase` with `[your_pkg_name]` in the all files
 
 ## Structure
 
