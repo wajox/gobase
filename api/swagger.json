@@ -1,8 +1,7 @@
 {
     "swagger": "2.0",
     "info": {
-        "contact": {},
-        "license": {}
+        "contact": {}
     },
     "paths": {
         "/api/v1/status": {
@@ -58,7 +57,6 @@
             "type": "object",
             "properties": {
                 "build": {
-                    "type": "object",
                     "$ref": "#/definitions/build.Info"
                 },
                 "id": {
@@ -76,7 +74,6 @@
                     "type": "object",
                     "properties": {
                         "attributes": {
-                            "type": "object",
                             "$ref": "#/definitions/status.Response"
                         }
                     }

@@ -1,7 +1,8 @@
-# Start from a Debian image with the latest version of Go installed
+# Start from a Debian image with Go 1.15 installed
 # and a workspace (GOPATH) configured at /go.
-FROM djirik/gokafka:1.14-alpine as builder
-RUN apk add gcc g++ make
+FROM golang:1.15-alpine as builder
+
+RUN apk add --update gcc g++ openssh git make
 
 ARG SSH_KEY
 
@@ -17,16 +18,19 @@ RUN mkdir -p ~/.ssh/ &&\
     git config --global url."git@github.com:".insteadOf "https://github.com/" &&\
     make build
 
-FROM djirik/alkafka
+FROM alpine:3.12
 
-RUN mkdir -p ./docs
+RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories &&\
+    apk update &&\
+    apk add --no-cache\
+    ca-certificates
+
+RUN mkdir -p ./api
 RUN mkdir -p ./db/migrations
-RUN mkdir -p ./app/config
 
-COPY --from=builder /go/src/github.com/ildarusmanov/gobase/docs ./docs
+COPY --from=builder /go/src/github.com/ildarusmanov/gobase/api ./api
 COPY --from=builder /go/src/github.com/ildarusmanov/gobase/db/migrations ./db/migrations
 
 COPY --from=builder /go/src/github.com/ildarusmanov/gobase/build/main .
-
 
 CMD ["./main", "s"]

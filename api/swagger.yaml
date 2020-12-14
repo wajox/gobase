@@ -20,7 +20,6 @@ definitions:
     properties:
       build:
         $ref: '#/definitions/build.Info'
-        type: object
       id:
         type: string
       status:
@@ -32,12 +31,10 @@ definitions:
         properties:
           attributes:
             $ref: '#/definitions/status.Response'
-            type: object
         type: object
     type: object
 info:
   contact: {}
-  license: {}
 paths:
   /api/v1/status:
     get:
