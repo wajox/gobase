@@ -1,0 +1,56 @@
+definitions:
+  build.Info:
+    properties:
+      arch:
+        type: string
+      build_date:
+        type: string
+      commit_hash:
+        type: string
+      compiler:
+        type: string
+      go_version:
+        type: string
+      os:
+        type: string
+      version:
+        type: string
+    type: object
+  status.Response:
+    properties:
+      build:
+        $ref: '#/definitions/build.Info'
+        type: object
+      id:
+        type: string
+      status:
+        type: string
+    type: object
+  status.ResponseDoc:
+    properties:
+      data:
+        properties:
+          attributes:
+            $ref: '#/definitions/status.Response'
+            type: object
+        type: object
+    type: object
+info:
+  contact: {}
+  license: {}
+paths:
+  /api/v1/status:
+    get:
+      consumes:
+      - application/json
+      description: get status
+      operationId: get-status
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/status.ResponseDoc'
+      summary: Get Application Status
+swagger: "2.0"

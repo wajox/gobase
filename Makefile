@@ -34,7 +34,7 @@ docs:
 	${MAKE} swagger
 
 swagger:
-	swag init
+	swag init --output=./api
 
 proto:
 	protoc -I grpc/schema --go_out=plugins=grpc:grpc/schema grpc/schema/*.proto
