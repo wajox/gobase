@@ -37,7 +37,7 @@ proto:
 	protoc -I grpc/schema --go_out=plugins=grpc:grpc/schema grpc/schema/*.proto
 
 install-tools:
-	curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.24.0
+	curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.33.0
 	go get github.com/google/wire/cmd/wire
 	go get -u github.com/onsi/ginkgo/ginkgo
 	go get -u github.com/swaggo/swag/cmd/swag
