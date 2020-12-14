@@ -1,7 +1,7 @@
 package status
 
 import (
-	"github.com/ildarusmanov/gobase/app/build"
+	"github.com/ildarusmanov/gobase/internal/app/build"
 )
 
 type Response struct {

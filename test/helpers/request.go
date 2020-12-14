@@ -7,7 +7,7 @@ import (
 	"net/http/httptest"
 
 	"github.com/gin-gonic/gin"
-	"github.com/ildarusmanov/gobase/web/controllers/apiv1"
+	"github.com/ildarusmanov/gobase/internal/web/controllers/apiv1"
 )
 
 func NewTestHTTPRequest(method, url string, postBody interface{}) *http.Request {

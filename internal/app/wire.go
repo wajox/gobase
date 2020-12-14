@@ -4,8 +4,8 @@ package app
 
 import (
 	"github.com/google/wire"
-	"github.com/ildarusmanov/gobase/app/dependencies"
-	"github.com/ildarusmanov/gobase/app/initializers"
+	"github.com/ildarusmanov/gobase/internal/app/dependencies"
+	"github.com/ildarusmanov/gobase/internal/app/initializers"
 )
 
 func BuildApplication() (*Application, error) {

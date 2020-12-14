@@ -1,7 +1,7 @@
 package initializers
 
 import (
-	"github.com/ildarusmanov/gobase/app/build"
+	"github.com/ildarusmanov/gobase/internal/app/build"
 )
 
 func InitializeBuildInfo() *build.Info {

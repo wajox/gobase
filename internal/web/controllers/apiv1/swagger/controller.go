@@ -4,7 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 	//nolint: golint //reason: blank import because of swagger docs init
 	_ "github.com/ildarusmanov/gobase/docs"
-	"github.com/ildarusmanov/gobase/web/controllers/apiv1"
+	"github.com/ildarusmanov/gobase/internal/web/controllers/apiv1"
 	ginSwagger "github.com/swaggo/gin-swagger"                // gin-swagger middleware
 	swaggerFiles "github.com/swaggo/gin-swagger/swaggerFiles" // swagger embed files
 )

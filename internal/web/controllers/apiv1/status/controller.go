@@ -2,9 +2,9 @@ package status
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/ildarusmanov/gobase/app/build"
-	"github.com/ildarusmanov/gobase/web/controllers/apiv1"
-	"github.com/ildarusmanov/gobase/web/render"
+	"github.com/ildarusmanov/gobase/internal/app/build"
+	"github.com/ildarusmanov/gobase/internal/web/controllers/apiv1"
+	"github.com/ildarusmanov/gobase/internal/web/render"
 
 	"net/http"
 )
