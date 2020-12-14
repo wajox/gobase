@@ -1,4 +1,4 @@
-# Golang Base application
+# GoBase
 
 This is a simple skeleton for golang application. Inspired by development experience and updated according to github.com/golang-standards/project-layout.
 
