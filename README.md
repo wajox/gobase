@@ -46,3 +46,15 @@ make proto
 # generate dependencies with wire
 make deps
 ```
+
+## Tools and packages
+* gin-gonic
+* ginkgo with gomega
+* viper
+* golangci-lint
+* wire
+* swag
+* migrate
+* protoc
+* jsonapi
+* docker with docker-compose
