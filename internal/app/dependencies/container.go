@@ -1,7 +1,7 @@
 package dependencies
 
 import (
-	"github.com/ildarusmanov/gobase/internal/app/build"
+	"github.com/wajox/gobase/internal/app/build"
 )
 
 // Container is a DI container for application

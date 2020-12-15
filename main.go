@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/ildarusmanov/gobase/cmd"
+	"github.com/wajox/gobase/cmd"
 )
 
 func main() {

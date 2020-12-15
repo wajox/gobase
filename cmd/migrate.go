@@ -7,7 +7,7 @@ import (
 	// "syscall"
 	// "time"
 
-	// "github.com/ildarusmanov/gobase/internal/app"
+	// "github.com/wajox/gobase/internal/app"
 	// "github.com/rs/zerolog/log"
 	"github.com/spf13/cobra"
 )

@@ -1,4 +1,4 @@
-module github.com/ildarusmanov/gobase
+module github.com/wajox/gobase
 
 go 1.15
 

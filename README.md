@@ -4,8 +4,8 @@ This is a simple skeleton for golang application. Inspired by development experi
 
 ## How to use?
 
-1. Clone the repository (with git client `git clone github.com/ildarusmanov/gobase [project_name]` or use it as template on github for creating a new project)
-2. replace `github.com/ildarusmanov/gobase` with `[your_pkg_name]` in the all files
+1. Clone the repository (with git client `git clone github.com/wajox/gobase [project_name]` or use it as template on github for creating a new project)
+2. replace `github.com/wajox/gobase` with `[your_pkg_name]` in the all files
 
 ## Structure
 

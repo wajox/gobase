@@ -4,8 +4,8 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/ildarusmanov/gobase/internal/app/dependencies"
-	"github.com/ildarusmanov/gobase/internal/app/initializers"
+	"github.com/wajox/gobase/internal/app/dependencies"
+	"github.com/wajox/gobase/internal/app/initializers"
 	"github.com/rs/zerolog/log"
 )
 

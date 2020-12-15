@@ -1,4 +1,4 @@
-PROJECT_PKG = github.com/ildarusmanov/gobase
+PROJECT_PKG = github.com/wajox/gobase
 BUILD_DIR = build
 VERSION ?=$(shell git describe --tags --exact-match 2>/dev/null || git symbolic-ref -q --short HEAD)
 COMMIT_HASH ?= $(shell git rev-parse --short HEAD 2>/dev/null)

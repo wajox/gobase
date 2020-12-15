@@ -6,8 +6,8 @@
 package app
 
 import (
-	"github.com/ildarusmanov/gobase/internal/app/dependencies"
-	"github.com/ildarusmanov/gobase/internal/app/initializers"
+	"github.com/wajox/gobase/internal/app/dependencies"
+	"github.com/wajox/gobase/internal/app/initializers"
 )
 
 // Injectors from wire.go:

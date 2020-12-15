@@ -7,8 +7,8 @@ RUN apk add --update gcc g++ openssh git make
 ARG SSH_KEY
 
 # setup dependencies
-ADD . /go/src/github.com/ildarusmanov/gobase
-WORKDIR /go/src/github.com/ildarusmanov/gobase
+ADD . /go/src/github.com/wajox/gobase
+WORKDIR /go/src/github.com/wajox/gobase
 
 ENV GO111MODULE on
 
@@ -28,9 +28,9 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repos
 RUN mkdir -p ./api
 RUN mkdir -p ./db/migrations
 
-COPY --from=builder /go/src/github.com/ildarusmanov/gobase/api ./api
-COPY --from=builder /go/src/github.com/ildarusmanov/gobase/db/migrations ./db/migrations
+COPY --from=builder /go/src/github.com/wajox/gobase/api ./api
+COPY --from=builder /go/src/github.com/wajox/gobase/db/migrations ./db/migrations
 
-COPY --from=builder /go/src/github.com/ildarusmanov/gobase/build/main .
+COPY --from=builder /go/src/github.com/wajox/gobase/build/main .
 
 CMD ["./main", "s"]
