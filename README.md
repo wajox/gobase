@@ -48,7 +48,9 @@ make deps
 ```
 
 ## Create new project
-### With (clonegopkg)[https://github.com/wajox/clonegopkg]
+
+## With [clonegopkg](https://github.com/wajox/clonegopkg)
+
 ```sh
 # install clonegopkg
 go install -i github.com/wajox/clonegopkg
@@ -62,6 +64,7 @@ git add .
 git commit -m "init project from gobase template"
 git remote add origin git@github.com:wajox/newproject.git
 git push origin master
+
 ```
 
 
