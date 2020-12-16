@@ -47,6 +47,24 @@ make proto
 make deps
 ```
 
+## Create new project
+### With (clonegopkg)[https://github.com/wajox/clonegopkg]
+```sh
+# install clonegopkg
+go install -i github.com/wajox/clonegopkg
+
+# create your project
+clonegopkg clone git@github.com:wajox/gobase.git github.com/wajox/newproject
+
+# push to your git repository
+cd ~/go/src/github.com/wajox/newproject
+git add .
+git commit -m "init project from gobase template"
+git remote add origin git@github.com:wajox/newproject.git
+git push origin master
+```
+
+
 ## Tools and packages
 * gin-gonic
 * ginkgo with gomega
