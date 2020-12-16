@@ -1,5 +1,5 @@
 //nolint //reason: TODO. disabled just due to developing process. uncomment it when module will be done
-package cmd
+package cli
 
 import (
 	// "os"
@@ -12,11 +12,15 @@ import (
 	"github.com/spf13/cobra"
 )
 
-func NewSeedCmd() *cobra.Command {
+const (
+	MigrationsPath = "file://db/migrations"
+)
+
+func NewMigrateCmd() *cobra.Command {
 	return &cobra.Command{
-		Use:     "seed",
-		Aliases: []string{"seed"},
-		Short:   "apply seeds for database",
+		Use:     "migrate",
+		Aliases: []string{"migrate"},
+		Short:   "run migrations for database",
 		Run: func(cmd *cobra.Command, args []string) {
 			// log.Info().Msg("Starting")
 
@@ -30,7 +34,7 @@ func NewSeedCmd() *cobra.Command {
 			// 	log.Info().Msg("Started")
 			// }
 
-			// run seeds
+			// run migrations
 
 			// log.Error().Err(application.Stop()).Msg("stop application")
 

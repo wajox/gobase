@@ -1,4 +1,4 @@
-package cmd
+package cli
 
 import (
 	"context"
@@ -7,9 +7,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/wajox/gobase/internal/app"
 	"github.com/rs/zerolog/log"
 	"github.com/spf13/cobra"
+	"github.com/wajox/gobase/internal/app"
 )
 
 func NewServeCmd() *cobra.Command {

@@ -31,6 +31,6 @@ RUN mkdir -p ./db/migrations
 COPY --from=builder /go/src/github.com/wajox/gobase/api ./api
 COPY --from=builder /go/src/github.com/wajox/gobase/db/migrations ./db/migrations
 
-COPY --from=builder /go/src/github.com/wajox/gobase/build/main .
+COPY --from=builder /go/src/github.com/wajox/gobase/build/app .
 
-CMD ["./main", "s"]
+CMD ["./app", "s"]
