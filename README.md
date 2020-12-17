@@ -71,7 +71,8 @@ git push origin master
 ## Tools and packages
 * gin-gonic
 * ginkgo with gomega
-* viper
+* spf13/viper
+* spf13/cobra
 * envy
 * zerolog
 * golangci-lint
