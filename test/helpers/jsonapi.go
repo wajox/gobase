@@ -20,7 +20,6 @@ import (
 // 	payload,
 // )
 // ```
-
 func JSONModelToBytesJSON(model interface{}) (*bytes.Reader, error) {
 	payloadPage, err := jsonapi.Marshal(model)
 	if err != nil {

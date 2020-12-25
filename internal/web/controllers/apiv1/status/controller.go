@@ -9,19 +9,17 @@ import (
 	"net/http"
 )
 
-const (
-	StatusOK = "OK"
-)
-
 var (
 	_ apiv1.Controller = (*Controller)(nil)
 )
 
+// Controller is a controller implementation for status checks
 type Controller struct {
 	apiv1.BaseController
 	buildInfo *build.Info
 }
 
+// NewController creates new status controller instance
 func NewController(bi *build.Info) *Controller {
 	return &Controller{
 		buildInfo: bi,
@@ -38,11 +36,12 @@ func NewController(bi *build.Info) *Controller {
 // @Router /api/v1/status [get]
 func (ctrl *Controller) GetStatus(ctx *gin.Context) {
 	render.JSONAPIPayload(ctx, http.StatusOK, &Response{
-		Status: StatusOK,
+		Status: http.StatusText(http.StatusOK),
 		Build:  ctrl.buildInfo,
 	})
 }
 
+// DefineRoutes adds controller routes to the router
 func (ctrl *Controller) DefineRoutes(r gin.IRouter) {
 	r.GET("/api/v1/status", ctrl.GetStatus)
 }

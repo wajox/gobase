@@ -8,6 +8,7 @@ import (
 	"github.com/google/uuid"
 )
 
+// NotFoundError renders Not Found error
 func NotFoundError(ctx *gin.Context, detail string) {
 	objects := []*jsonapi.ErrorObject{
 		{
@@ -20,6 +21,7 @@ func NotFoundError(ctx *gin.Context, detail string) {
 	Errors(ctx, http.StatusNotFound, objects)
 }
 
+// InternalServerError renders Internal Server error
 func InternalServerError(ctx *gin.Context, detail string) {
 	objects := []*jsonapi.ErrorObject{
 		{
@@ -32,6 +34,7 @@ func InternalServerError(ctx *gin.Context, detail string) {
 	Errors(ctx, http.StatusInternalServerError, objects)
 }
 
+// UnprocessableEntity renders Unprocessable Entity error
 func UnprocessableEntity(ctx *gin.Context, detail string) {
 	objects := []*jsonapi.ErrorObject{
 		{
@@ -44,6 +47,7 @@ func UnprocessableEntity(ctx *gin.Context, detail string) {
 	Errors(ctx, http.StatusUnprocessableEntity, objects)
 }
 
+// Unauthorized renders Unauthorized error
 func Unauthorized(ctx *gin.Context, detail string) {
 	objects := []*jsonapi.ErrorObject{
 		{
@@ -56,6 +60,7 @@ func Unauthorized(ctx *gin.Context, detail string) {
 	Errors(ctx, http.StatusUnauthorized, objects)
 }
 
+// BadRequest renders Bad Request error
 func BadRequest(ctx *gin.Context, detail string) {
 	objects := []*jsonapi.ErrorObject{
 		{
@@ -68,6 +73,7 @@ func BadRequest(ctx *gin.Context, detail string) {
 	Errors(ctx, http.StatusBadRequest, objects)
 }
 
+// ValidationErrors renders validation errors with Unprocessable Entity status
 func ValidationErrors(ctx *gin.Context, errs []error) {
 	objects := []*jsonapi.ErrorObject{}
 	for i := range errs {
@@ -82,6 +88,7 @@ func ValidationErrors(ctx *gin.Context, errs []error) {
 	Errors(ctx, http.StatusUnprocessableEntity, objects)
 }
 
+// ConflictError renders Conflict error
 func ConflictError(ctx *gin.Context, detail string) {
 	objects := []*jsonapi.ErrorObject{
 		{
