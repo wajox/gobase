@@ -4,10 +4,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-const (
-	MigrationsPath = "file://db/migrations"
-)
-
+// NewMigrateCmd implements migrate command
 func NewMigrateCmd() *cobra.Command {
 	return &cobra.Command{
 		Use:     "migrate",

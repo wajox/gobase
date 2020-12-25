@@ -15,7 +15,7 @@ type Info struct {
 	Compiler   string `json:"compiler,omitempty"`
 }
 
-// NewApplicationInfo returns all available build information.
+// NewInfo returns all available build information.
 func NewInfo() *Info {
 	return &Info{
 		Version:    Version,

@@ -9,6 +9,7 @@ import (
 	"github.com/wajox/gobase/internal/web/router"
 )
 
+// InitializeRouter initializes new gin router
 func InitializeRouter(container *dependencies.Container) *gin.Engine {
 	r := router.NewRouter()
 

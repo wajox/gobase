@@ -5,6 +5,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
+// ExecuteRootCmd prepares all CLI commands
 func ExecuteRootCmd() {
 	c := cobra.Command{}
 

@@ -9,11 +9,13 @@ import (
 	"github.com/wajox/gobase/internal/app/initializers"
 )
 
+// Application is a main struct for the application that contains general information
 type Application struct {
 	httpServer *http.Server
 	Container  *dependencies.Container
 }
 
+// InitializeApplication initializes new application
 func InitializeApplication() (*Application, error) {
 	if err := initializers.InitializeEnvs(); err != nil {
 		return nil, err
@@ -26,15 +28,21 @@ func InitializeApplication() (*Application, error) {
 	return BuildApplication()
 }
 
+// Start starts application services
 func (a *Application) Start(ctx context.Context, cli bool) {
 	if cli {
 		return
 	}
 
-	a.StartHTTPServer()
+	a.startHTTPServer()
 }
 
-func (a *Application) StartHTTPServer() {
+// Stop stops application services
+func (a *Application) Stop() (err error) {
+	return a.httpServer.Shutdown(context.TODO())
+}
+
+func (a *Application) startHTTPServer() {
 	go func() {
 		log.Info().Str("HTTPServerAddress", a.httpServer.Addr).Msg("started http server")
 
@@ -43,8 +51,4 @@ func (a *Application) StartHTTPServer() {
 			log.Panic().Err(err).Msg("HTTP Server stopped")
 		}
 	}()
-}
-
-func (a *Application) Stop() (err error) {
-	return a.httpServer.Shutdown(context.TODO())
 }

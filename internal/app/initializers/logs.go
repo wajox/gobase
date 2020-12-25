@@ -10,11 +10,15 @@ import (
 )
 
 const (
-	LogLevelEnv       = "LOG_LEVEL"
+	// LogLevelEnv is an environment variable name for LOG_LEVEL
+	LogLevelEnv = "LOG_LEVEL"
+	// EnableJSONLogsEnv is an environment variable name for ENABLE_JSON_LOGS
 	EnableJSONLogsEnv = "ENABLE_JSON_LOGS"
-	DefaultLogLevel   = 0
+	// DefaultLogLevel is a default LOG_LEVEL value
+	DefaultLogLevel = 0
 )
 
+// InitializeLogs setups zerolog logger
 func InitializeLogs() error {
 	logLevel, err := strconv.Atoi(envy.Get(LogLevelEnv, "0"))
 	if err != nil {

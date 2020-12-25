@@ -12,6 +12,7 @@ import (
 	"github.com/wajox/gobase/internal/app"
 )
 
+// NewServeCmd starts new application instance
 func NewServeCmd() *cobra.Command {
 	return &cobra.Command{
 		Use:     "serve",
@@ -40,7 +41,7 @@ func NewServeCmd() *cobra.Command {
 
 			log.Error().Err(application.Stop()).Msg("stop application")
 
-			time.Sleep(time.Second * CliCmdExecFinishDelaySeconds)
+			time.Sleep(time.Second * cliCmdExecFinishDelaySeconds)
 			log.Info().Msg("Finished")
 		},
 	}

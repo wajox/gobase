@@ -4,6 +4,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
+// NewSeedCmd implements seed command for DB setup
 func NewSeedCmd() *cobra.Command {
 	return &cobra.Command{
 		Use:     "seed",
