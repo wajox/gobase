@@ -1,7 +1,7 @@
 # GoBase
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Goreport](https://goreportcard.com/badge/github.com/wajox/gobase)](https://goreportcard.com/report/github.com/wajox/gobase)
+[![Go Report Card](https://goreportcard.com/badge/github.com/wajox/gobase)](https://goreportcard.com/report/github.com/wajox/gobase)
 
 This is a simple skeleton for golang application. Inspired by development experience and updated according to github.com/golang-standards/project-layout.
 
