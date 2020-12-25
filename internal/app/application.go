@@ -4,9 +4,9 @@ import (
 	"context"
 	"net/http"
 
+	"github.com/rs/zerolog/log"
 	"github.com/wajox/gobase/internal/app/dependencies"
 	"github.com/wajox/gobase/internal/app/initializers"
-	"github.com/rs/zerolog/log"
 )
 
 type Application struct {
