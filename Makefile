@@ -27,7 +27,7 @@ deps:
 	wire ./...
 
 swagger:
-	swag init --output=./api
+	swag init -g cmd/app/main.go --output=./api
 
 proto:
 	protoc -I grpc/schema --go_out=plugins=grpc:grpc/schema grpc/schema/*.proto

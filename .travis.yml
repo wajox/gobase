@@ -13,7 +13,7 @@ install:
 script:
   - go get -u github.com/swaggo/swag/cmd/swag
   - go get -u github.com/onsi/ginkgo/ginkgo
-  - swag init
+  - swag init -g cmd/app/main.go --output=./api
   - ./bin/golangci-lint run --fix --deadline 3m
   - ./go.test.sh
 after_success:
