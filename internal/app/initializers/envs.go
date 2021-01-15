@@ -6,10 +6,10 @@ import (
 )
 
 // InitializeEnvs intializes envy
-func InitializeEnvs() error {
+func InitializeEnvs() {
 	if err := envy.Load(); err != nil {
 		log.Info().Err(err).Msg("can not load .env file")
-	}
 
-	return nil
+		envy.Reload()
+	}
 }
