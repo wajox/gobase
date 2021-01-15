@@ -4,6 +4,7 @@ env:
 go:
   - 1.15.x
 before_install:
+  - go get -t -v ./...
   - curl -sfL https://install.goreleaser.com/github.com/golangci/golangci-lint.sh | sh -s v1.35.2
   - cd ${TRAVIS_BUILD_DIR}
   - sleep 15
@@ -14,4 +15,6 @@ script:
   - go get -u github.com/onsi/ginkgo/ginkgo
   - swag init
   - ./bin/golangci-lint run --fix --deadline 3m
-  - go test -v ./...
+  - ./go.test.sh
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
