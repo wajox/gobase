@@ -2,16 +2,16 @@ language: go
 env:
   - GO111MODULE=on
 go:
-  - 1.14.x
-services:
-  - mongodb
+  - 1.15.x
 before_install:
-  - curl -sfL https://install.goreleaser.com/github.com/golangci/golangci-lint.sh | sh -s v1.33.0
+  - curl -sfL https://install.goreleaser.com/github.com/golangci/golangci-lint.sh | sh -s v1.35.2
   - cd ${TRAVIS_BUILD_DIR}
   - sleep 15
 install:
   - go mod verify
 script:
   - go get -u github.com/swaggo/swag/cmd/swag
+  - go get -u github.com/onsi/ginkgo/ginkgo
   - swag init
   - ./bin/golangci-lint run --fix --deadline 3m
+  - go test -v ./...
