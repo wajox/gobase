@@ -17,9 +17,7 @@ type Application struct {
 
 // InitializeApplication initializes new application
 func InitializeApplication() (*Application, error) {
-	if err := initializers.InitializeEnvs(); err != nil {
-		return nil, err
-	}
+	initializers.InitializeEnvs()
 
 	if err := initializers.InitializeLogs(); err != nil {
 		return nil, err

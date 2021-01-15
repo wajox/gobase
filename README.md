@@ -3,6 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Go Report Card](https://goreportcard.com/badge/github.com/wajox/gobase)](https://goreportcard.com/report/github.com/wajox/gobase)
 [![Go Reference](https://pkg.go.dev/github.com/wajox/gobase.svg)](https://pkg.go.dev/github.com/wajox/gobase)
+[![codecov](https://codecov.io/gh/wajox/gobase/branch/master/graph/badge.svg?token=0K79C2LH2K)](https://codecov.io/gh/wajox/gobase)
 
 This is a simple skeleton for golang application. Inspired by development experience and updated according to github.com/golang-standards/project-layout.
 
