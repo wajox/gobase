@@ -1,6 +1,6 @@
 # Start from a Debian image with Go 1.15 installed
 # and a workspace (GOPATH) configured at /go.
-FROM golang:1.15-alpine as builder
+FROM golang:1.16-alpine as builder
 
 RUN apk add --update gcc g++ openssh git make
 
