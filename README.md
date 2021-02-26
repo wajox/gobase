@@ -59,7 +59,7 @@ make deps
 
 ```sh
 # install clonegopkg
-go install -i github.com/wajox/clonegopkg@latest
+go install github.com/wajox/clonegopkg@latest
 
 # create your project
 clonegopkg clone git@github.com:wajox/gobase.git github.com/wajox/newproject
