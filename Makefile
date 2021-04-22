@@ -33,7 +33,7 @@ swagger:
 	swag init --parseDependency -g cmd/app/main.go --output=./api
 
 proto:
-	protoc -I grpc/schema --go_out=plugins=grpc:grpc/schema grpc/schema/*.proto
+	protoc --go_out=plugins=grpc:. internal/grpc/schema/*.proto
 
 install-tools:
 	curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.33.0
