@@ -4,7 +4,7 @@ go 1.16
 
 require (
 	github.com/alecthomas/template v0.0.0-20190718012654-fb15b899a751
-	github.com/gin-gonic/gin v1.6.3
+	github.com/gin-gonic/gin v1.7.0
 	github.com/go-openapi/spec v0.20.0 // indirect
 	github.com/gobuffalo/envy v1.9.0
 	github.com/google/jsonapi v0.0.0-20201022225600-f822737867f6
