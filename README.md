@@ -5,6 +5,7 @@
 [![Go Reference](https://pkg.go.dev/badge/github.com/wajox/gobase.svg)](https://pkg.go.dev/github.com/wajox/gobase)
 [![codecov](https://codecov.io/gh/wajox/gobase/branch/master/graph/badge.svg?token=0K79C2LH2K)](https://codecov.io/gh/wajox/gobase)
 [![Build Status](https://travis-ci.org/wajox/gobase.svg?branch=master)](https://travis-ci.org/wajox/gobase)
+[![Mentioned in Awesome Go](https://awesome.re/mentioned-badge.svg)](https://github.com/avelino/awesome-go)
 
 This is a simple skeleton for golang application. Inspired by development experience and updated according to github.com/golang-standards/project-layout.
 
