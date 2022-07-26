@@ -2,8 +2,8 @@ package swagger
 
 import (
 	"github.com/gin-gonic/gin"
-	ginSwagger "github.com/swaggo/gin-swagger"                // gin-swagger middleware
-	swaggerFiles "github.com/swaggo/gin-swagger/swaggerFiles" // swagger embed files
+	swaggerFiles "github.com/swaggo/files"     // swagger embed files
+	ginSwagger "github.com/swaggo/gin-swagger" // gin-swagger middleware
 
 	//nolint: golint //reason: blank import because of swagger docs init
 	_ "github.com/wajox/gobase/api"
