@@ -10,7 +10,7 @@ import (
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 
-	. "github.com/wajox/gobase/internal/web/controllers/apiv1/status"
+	. "github.com/wajox/gobase/internal/gateways/web/controllers/apiv1/status"
 )
 
 var _ = Describe("Controller", func() {

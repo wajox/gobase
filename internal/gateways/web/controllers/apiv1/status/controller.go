@@ -3,8 +3,8 @@ package status
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/wajox/gobase/internal/app/build"
-	"github.com/wajox/gobase/internal/web/controllers/apiv1"
-	"github.com/wajox/gobase/internal/web/render"
+	"github.com/wajox/gobase/internal/gateways/web/controllers/apiv1"
+	"github.com/wajox/gobase/internal/gateways/web/render"
 
 	"net/http"
 )

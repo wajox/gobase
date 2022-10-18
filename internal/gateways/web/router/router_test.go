@@ -4,7 +4,7 @@ import (
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 
-	. "github.com/wajox/gobase/internal/web/router"
+	. "github.com/wajox/gobase/internal/gateways/web/router"
 )
 
 var _ = Describe("Router", func() {
