@@ -3,10 +3,10 @@ package initializers
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/wajox/gobase/internal/app/dependencies"
-	"github.com/wajox/gobase/internal/web/controllers/apiv1"
-	apiv1Status "github.com/wajox/gobase/internal/web/controllers/apiv1/status"
-	apiv1Swagger "github.com/wajox/gobase/internal/web/controllers/apiv1/swagger"
-	"github.com/wajox/gobase/internal/web/router"
+	"github.com/wajox/gobase/internal/gateways/web/controllers/apiv1"
+	apiv1Status "github.com/wajox/gobase/internal/gateways/web/controllers/apiv1/status"
+	apiv1Swagger "github.com/wajox/gobase/internal/gateways/web/controllers/apiv1/swagger"
+	"github.com/wajox/gobase/internal/gateways/web/router"
 )
 
 // InitializeRouter initializes new gin router

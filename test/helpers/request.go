@@ -7,7 +7,7 @@ import (
 	"net/http/httptest"
 
 	"github.com/gin-gonic/gin"
-	"github.com/wajox/gobase/internal/web/controllers/apiv1"
+	"github.com/wajox/gobase/internal/gateways/web/controllers/apiv1"
 )
 
 // NewTestHTTPRequest is a HTTP request builder for testing purposes

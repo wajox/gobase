@@ -3,7 +3,7 @@ package initializers_test
 import (
 	"github.com/gin-gonic/gin"
 
-	"github.com/wajox/gobase/internal/web/router"
+	"github.com/wajox/gobase/internal/gateways/web/router"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
